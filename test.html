@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset='utf8'>
+</head>
+<body>
+
+<main style="margin-top: 50px; margin-left: 20%; margin-right: 20%;">
+    <div>
+        <input id="input1" style="width: 100%;">
+    </div>
+    <br>
+    <center>
+        <button onclick="clicker()">click</button>
+    </center>
+
+    <br><br>
+</main>
+
+<div id="text">
+
+</div>
+
+<script type="text/javascript" src="public/js/jquery-3.4.1.min.js"></script>
+<script>
+
+    function clicker() {
+        var vl =  $('#input1').val();//.split(':');
+        console.log(vl);
+	var val1 = vl.split(':');
+	var s1 = val1[0];
+        var s2 = '';
+        val1[1].split(',').forEach(function (item, index) {
+            s2 += "VideoModel(name: '"+s1+"', title: '"+item.trim()+"', <br>link: 'https://drive.google.com/u/1/uc?id=1E9h2zTrQ7mVjthebbT7NMycFLUzmmm4h&export=download'),<br>";
+            console.log("VideoModel(name: '"+s1+"', title: '"+item.trim()+"', \nlink: 'https://drive.google.com/u/1/uc?id=1E9h2zTrQ7mVjthebbT7NMycFLUzmmm4h&export=download'),");
+        });
+        console.log('end');
+        $('#text').html(s2);
+    }
+
+</script>
+
+</body>
+</html>

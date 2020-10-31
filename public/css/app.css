@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+
+  #sidebar.active {
+    margin-left: 0;
+  }
+}
+
