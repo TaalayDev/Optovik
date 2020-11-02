@@ -20,6 +20,10 @@ Route::get('auth/logout', function () {
     return back();
 })->name('auth.logout');
 
+Route::get('auth/login', function () {
+    return view('auth.login');
+});
+
 Route::prefix('stores')->group(function () {
     Route::get('/', 'Store\StoreController@fc_')->name('stores');
     Route::prefix('add')->group(function () {
